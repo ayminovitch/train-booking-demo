@@ -1,0 +1,64 @@
+{
+  "entrypoints": {
+    "app": {
+      "js": [
+        "/build/runtime.328ea1e1.js",
+        "/build/755.f5cf308f.js",
+        "/build/498.3bafb5f9.js",
+        "/build/665.5546f089.js",
+        "/build/95.ce62c8da.js",
+        "/build/448.4e99407a.js",
+        "/build/app.4d6b2151.js"
+      ],
+      "css": [
+        "/build/448.1577d998.css",
+        "/build/app.69926342.css"
+      ]
+    },
+    "login": {
+      "js": [
+        "/build/runtime.328ea1e1.js",
+        "/build/755.f5cf308f.js",
+        "/build/login.395771d5.js"
+      ]
+    },
+    "admin": {
+      "js": [
+        "/build/runtime.328ea1e1.js",
+        "/build/755.f5cf308f.js",
+        "/build/498.3bafb5f9.js",
+        "/build/665.5546f089.js",
+        "/build/671.998d8182.js",
+        "/build/admin.cb077bfe.js"
+      ],
+      "css": [
+        "/build/admin.691f9b8c.css"
+      ]
+    },
+    "search": {
+      "js": [
+        "/build/runtime.328ea1e1.js",
+        "/build/755.f5cf308f.js",
+        "/build/498.3bafb5f9.js",
+        "/build/95.ce62c8da.js",
+        "/build/search.e48a4b69.js"
+      ]
+    }
+  },
+  "integrity": {
+    "/build/runtime.328ea1e1.js": "sha384-misBNKWn5SlnUyn6A2WVYLieqrBSrxjHErIWdwZRpLWNd/ROsj/GptIzCgQGsOIa",
+    "/build/755.f5cf308f.js": "sha384-SAv+SyvZr31CmFrJFfKEYK0fDrMVx8vh19SI4QznAB/ar+Z1k6IT9Mg2SDZtLwD2",
+    "/build/498.3bafb5f9.js": "sha384-yoQvBlSFO4jMdQIBvie1V5XQ4M8F0CGnS2mFtS9RslTqLbW8IYO/xONlip3SUDGH",
+    "/build/665.5546f089.js": "sha384-9rtrspnRdXIFCqXVrchHFecI1cx2T1cjEyzYr5dcg8KgfFWAS0AFQK+n6Xt8NtcP",
+    "/build/95.ce62c8da.js": "sha384-qjjgOM248ZFQ9KfuA31e3cRCLwAFnemrWC7IOnFVa8GCMZ4ZUH9gLXBDHip9tjge",
+    "/build/448.4e99407a.js": "sha384-VXhFNmGZUil5mz9P9Fzmjx51e7YcGVL50TXKzJdqcROWGg/kdsn0G5afMgI47E/C",
+    "/build/app.4d6b2151.js": "sha384-xvNRJE6ep3GItdtiZXAnDqWR4JXcBZ0l/Q5s/QzFfS5Ab/300rNfrkSY/rUJ7dEG",
+    "/build/448.1577d998.css": "sha384-kvXCkEnowJBWHbL0aDYvXj3WtCMuC2aLoXicDBmPrHdi9+E+fgP5jat7oW9RfyYs",
+    "/build/app.69926342.css": "sha384-o1yv/C7j2hpRUjIp/Vbcc+ebqIM2lKKtXxAKQNCIn4/Swsft8SkqitPBF/OIdkmi",
+    "/build/login.395771d5.js": "sha384-bKBy5bAsLAFHFo/zxqJkheRiwvRSVHXwogJPw7DWc6qfnP03VaNFMyEc/0cRBf0k",
+    "/build/671.998d8182.js": "sha384-mMNJycuujVOhTOFYoo3eGkxhdS/2Qy7p4cw6frR+8I5lOyQveLjVgXTubUO8xblA",
+    "/build/admin.cb077bfe.js": "sha384-S9PJbcm/dS+q4/0kTVRvlmNCx7TnCgWJKQ4JoRpRKfF9pQJA4COA/f+1OLuItN28",
+    "/build/admin.691f9b8c.css": "sha384-4DrM6czCoIi/wUbtZloc82FNEKtnOn/srW8e1ZtNqcmENgNy5xZeINeFptq+p56H",
+    "/build/search.e48a4b69.js": "sha384-uFkpbqk8DeQzyiII4tlm/3rxLPb8Atamzbekdl0zGnnmLM1N5EZuhOzoEDQbr7U4"
+  }
+}

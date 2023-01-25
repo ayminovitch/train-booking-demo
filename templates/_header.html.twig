@@ -1,0 +1,106 @@
+<!-- Header
+  ============================================= -->
+<header id="header">
+	<div class="container">
+		<div class="header-row">
+			<div
+				class="header-column justify-content-start">
+
+				<!-- Logo
+								          ============================================= -->
+				<div class="logo">
+					<a href="{{ path('homepage') }}" title="TER"><img src="{{ asset("images/ter-logo.png") }}" alt="TER" width="127"/></a>
+				</div>
+				<!-- Logo end -->
+
+			</div>
+
+			<div
+				class="header-column justify-content-end">
+
+				<!-- Primary Navigation
+								          ============================================= -->
+				<nav class="primary-menu navbar navbar-expand-lg">
+					<div id="header-nav" class="collapse navbar-collapse">
+						<ul class="navbar-nav">
+							<li class="dropdown active">
+								<a class="dropdown-toggle" href="#">Home</a>
+							</li>
+							<li class="dropdown">
+								<a class="dropdown-toggle" href="#">Se déplacer</a>
+							</li>
+							<li class="dropdown dropdown-mega">
+								<a class="dropdown-toggle" href="#">Titres et Tarifs</a>
+							</li>
+							<li class="dropdown">
+								<a class="dropdown-toggle" href="#">Le TER de Dakar</a>
+							</li>
+							<li class="dropdown">
+								<a class="dropdown-toggle" href="#">Aides & Contacts</a>
+							</li>
+
+							{% if app.user %}
+								<li class="dropdown login-signup ml-lg-2">
+									<a href="#" class="dropdown-toggle pl-lg-4 pr-0" data-toggle="dropdown" role="button" aria-expanded="false" id="user">
+                    <span class="d-none d-lg-inline-block">
+                      <i class="fas fa-user"></i> 
+                    </span>
+									</a>
+									<ul class="dropdown-menu user" role="menu" aria-labelledby="user">
+										{# <li>
+											<a href="{{ path('user_edit') }}">
+												<i class="fa fa-edit" aria-hidden="true"></i>
+												{{ 'menu.user'|trans }}
+											</a>
+										</li> #}
+
+                    <li>
+                      <a href="{{ path('easyadmin') }}">
+                        <i class="fa fa-lock" aria-hidden="true" style="margin-right: 3%;"></i>
+                        Dashboard
+                      </a>
+                    </li>
+
+										<li class="divider"></li>
+										<li>
+                      <a
+                        href="{{ path('security_logout') }}">
+                        {# <i class="fa fa-sign-out" aria-hidden="true" style="margin-right: 3%;"></i> #}
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-box-arrow-right" viewbox="0 0 16 16" style="margin-right: 3%;">
+                          <path fill-rule="evenodd" d="M10 12.5a.5.5 0 0 1-.5.5h-8a.5.5 0 0 1-.5-.5v-9a.5.5 0 0 1 .5-.5h8a.5.5 0 0 1 .5.5v2a.5.5 0 0 0 1 0v-2A1.5 1.5 0 0 0 9.5 2h-8A1.5 1.5 0 0 0 0 3.5v9A1.5 1.5 0 0 0 1.5 14h8a1.5 1.5 0 0 0 1.5-1.5v-2a.5.5 0 0 0-1 0v2z"/>
+                          <path fill-rule="evenodd" d="M15.854 8.354a.5.5 0 0 0 0-.708l-3-3a.5.5 0 0 0-.708.708L14.293 7.5H5.5a.5.5 0 0 0 0 1h8.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3z"/>
+                        </svg>
+
+											  Logout
+											</a>
+										</li>
+									</ul>
+								</li>
+							{% else %}
+                <li class="login-signup ml-lg-2">
+                  <a class="pl-lg-4 pr-0" href="{{ path('security_login') }}" title="Login / Sign up">Login / Sign up
+                    <span class="d-none d-lg-inline-block">
+                      <i class="fas fa-user"></i> 
+                    </span>
+                  </a>
+                </li>
+              {% endif %}
+
+						</ul>
+					</div>
+				</nav>
+				<!-- Primary Navigation end -->
+
+			</div>
+
+			<!-- Collapse Button
+						        ============================================= -->
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#header-nav">
+				<span></span>
+				<span></span>
+				<span></span>
+			</button>
+		</div>
+	</div>
+</header>
+<!-- Header end -->

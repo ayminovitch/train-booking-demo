@@ -1,0 +1,283 @@
+{% extends 'base.html.twig' %}
+{% block content %}
+    <!-- Page Header
+    ============================================= -->
+    <section class="page-header page-header-text-light bg-secondary">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-md-8">
+            <h1>Trains</h1>
+          </div>
+          <div class="col-md-4">
+            <ul class="breadcrumb justify-content-start justify-content-md-end mb-0">
+              <li><a href="{{ path("app_homepage") }}">Home</a></li>
+              <li class="active">Trains</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section><!-- Page Header end -->
+    
+  <!-- Content
+  ============================================= -->
+  <div id="content">
+    <section class="container">
+        <div class="row">
+          <div class="col mb-2">
+            <form id="bookingTrain" method="post">
+              <div class="form-row">
+                <div class="col-md-6 col-lg form-group">
+                  <input type="text" class="form-control" id="trainFrom" required placeholder="From">
+                  <span class="icon-inside"><i class="fas fa-map-marker-alt"></i></span> </div>
+                <div class="col-md-6 col-lg form-group">
+                  <input type="text" class="form-control" id="trainTo" required placeholder="To">
+                  <span class="icon-inside"><i class="fas fa-map-marker-alt"></i></span> </div>
+                <div class="col-md-4 col-lg form-group">
+                  <input id="trainDepart" type="text" class="form-control" required placeholder="Depart Date">
+                  <span class="icon-inside"><i class="far fa-calendar-alt"></i></span> </div>
+                <div class="col-md-4 col-lg travellers-class form-group">
+                  <input type="text" id="trainTravellersClass"  class="travellers-class-input form-control" name="train-travellers-class" placeholder="Travellers, Class" readonly required onkeypress="return false;">
+                  <span class="icon-inside"><i class="fas fa-caret-down"></i></span>
+                  <div class="travellers-dropdown">
+                    <div class="row align-items-center">
+                      <div class="col-sm-7">
+                        <p class="mb-sm-0">Adults <small class="text-muted">(12+ yrs)</small></p>
+                      </div>
+                      <div class="col-sm-5">
+                        <div class="qty input-group">
+                          <div class="input-group-prepend">
+                            <button type="button" class="btn bg-light-4" data-value="decrease" data-target="#trainAdult-travellers" data-toggle="spinner">-</button>
+                          </div>
+                          <input type="text" data-ride="spinner" id="trainAdult-travellers" class="qty-spinner form-control" value="1" readonly>
+                          <div class="input-group-append">
+                            <button type="button" class="btn bg-light-4" data-value="increase" data-target="#trainAdult-travellers" data-toggle="spinner">+</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <hr class="my-2">
+                    <div class="row align-items-center">
+                      <div class="col-sm-7">
+                        <p class="mb-sm-0">Children <small class="text-muted">(2-12 yrs)</small></p>
+                      </div>
+                      <div class="col-sm-5">
+                        <div class="qty input-group">
+                          <div class="input-group-prepend">
+                            <button type="button" class="btn bg-light-4" data-value="decrease" data-target="#trainChildren-travellers" data-toggle="spinner">-</button>
+                          </div>
+                          <input type="text" data-ride="spinner" id="trainChildren-travellers" class="qty-spinner form-control" value="0" readonly>
+                          <div class="input-group-append">
+                            <button type="button" class="btn bg-light-4" data-value="increase" data-target="#trainChildren-travellers" data-toggle="spinner">+</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <hr class="my-2">
+                    <div class="row align-items-center">
+                      <div class="col-sm-7">
+                        <p class="mb-sm-0">Infants <small class="text-muted">(Below 2 yrs)</small></p>
+                      </div>
+                      <div class="col-sm-5">
+                        <div class="qty input-group">
+                          <div class="input-group-prepend">
+                            <button type="button" class="btn bg-light-4" data-value="decrease" data-target="#trainInfants-travellers" data-toggle="spinner">-</button>
+                          </div>
+                          <input type="text" data-ride="spinner" id="trainInfants-travellers" class="qty-spinner form-control" value="0" readonly>
+                          <div class="input-group-append">
+                            <button type="button" class="btn bg-light-4" data-value="increase" data-target="#trainInfants-travellers" data-toggle="spinner">+</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="form-group mt-3">
+                      <select id="train-class" name="train-class" class="custom-select">
+                        <option value="0">All Class</option>
+                        <option value="1">First Class</option>
+                        <option value="2">Second Class</option>
+                        <option value="3">First Class Sleeper (SL)</option>
+                        <option value="4">Second Class Sleeper (SL)</option>
+                        <option value="5">Business</option>
+                      </select>
+                    </div>
+                    <button class="btn btn-primary btn-block submit-done" type="button">Done</button>
+                  </div>
+                </div>
+                <div class="col-md-4 col-lg form-group">
+                  <button class="btn btn-primary btn-block" type="submit">Search</button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+        <div class="row">
+        
+        <!-- Side Panel
+        ============================================= -->
+        <aside class="col-md-3">
+            <div class="bg-light shadow-md rounded p-3">
+              <h3 class="text-5">Filter</h3>
+              <div class="accordion accordion-alternate style-2" id="toggleAlternate">
+                <div class="card">
+                  <div class="card-header" id="departure">
+                    <h5 class="mb-0"> <a href="#" class="collapse" data-toggle="collapse" data-target="#toggleDeparture" aria-expanded="true" aria-controls="toggleDeparture">Departure Time</a> </h5>
+                  </div>
+                  <div id="toggleDeparture" class="collapse show" aria-labelledby="departure">
+                    <div class="card-body">
+                      <p><span class="slider-time-departure">00:00</span> - <span class="slider-time-departure">23:59</span></p>
+                      <div id="slider-range-departure"></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="card">
+                  <div class="card-header" id="arrival">
+                    <h5 class="mb-0"> <a href="#" class="collapse" data-toggle="collapse" data-target="#toggleArrival" aria-expanded="true" aria-controls="toggleArrival">Arrival Time</a> </h5>
+                  </div>
+                  <div id="toggleArrival" class="collapse show" aria-labelledby="arrival">
+                    <div class="card-body">
+                      <p><span class="slider-time-arrival">00:00</span> - <span class="slider-time-arrival">23:59</span></p>
+                      <div id="slider-range-arrival"></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="card">
+                  <div class="card-header" id="fareClass">
+                    <h5 class="mb-0"> <a href="#" class="collapse" data-toggle="collapse" data-target="#togglefareClass" aria-expanded="true" aria-controls="togglefareClass">Fare Class</a> </h5>
+                  </div>
+                  <div id="togglefareClass" class="collapse show" aria-labelledby="fareClass">
+                    <div class="card-body">
+                      <div class="custom-control custom-checkbox">
+                        <input type="checkbox" id="1stClass" name="fareClass" class="custom-control-input">
+                        <label class="custom-control-label" for="1stClass">First Class</label>
+                      </div>
+                      <div class="custom-control custom-checkbox">
+                        <input type="checkbox" id="2ndClass" name="fareClass" class="custom-control-input">
+                        <label class="custom-control-label" for="2ndClass">Second Class</label>
+                      </div>
+                      <div class="custom-control custom-checkbox">
+                        <input type="checkbox" id="1stClassSL" name="fareClass" class="custom-control-input">
+                        <label class="custom-control-label" for="1stClassSL">First Class Sleeper (SL)</label>
+                      </div>
+                      <div class="custom-control custom-checkbox">
+                        <input type="checkbox" id="2ndClassSL" name="fareClass" class="custom-control-input">
+                        <label class="custom-control-label" for="2ndClassSL">Second Class Sleeper (SL)</label>
+                      </div>
+                      <div class="custom-control custom-checkbox">
+                        <input type="checkbox" id="business" name="fareClass" class="custom-control-input">
+                        <label class="custom-control-label" for="business">Business</label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </aside><!-- Side Panel end -->
+          
+          <div class="col-md-9 mt-4 mt-md-0">
+            <div class="bg-light shadow-md rounded py-4">
+              <div class="mx-3 mb-3 text-center">
+                <h2 class="text-6">Dakar <small class="mx-2">to</small>Diamniadio</h2>
+              </div>
+              <div class="text-1 bg-light-3 border border-right-0 border-left-0 py-2 px-3">
+                <div class="row">
+                  <div class="col col-sm-3"><span class="d-none d-sm-block">Train Name</span></div>
+                  <div class="col col-sm-2 text-center">Departure</div>
+                  <div class="col-sm-2 text-center d-none d-sm-block">Duration</div>
+                  <div class="col col-sm-2 text-center">Arrival</div>
+                </div>
+              </div>
+              <div class="train-list">
+                <div class="train-item">
+                  <div class="row align-items-sm-center flex-row py-4 px-3">
+                    <div class="col col-sm-3"> <span class="text-4 text-dark train-name">Express</span> <span class="text-muted d-block">12916</span> </div>
+                    <div class="col col-sm-2 text-center time-info"> <span class="text-4 text-dark">08:00</span> <small class="text-muted d-block">Dakar Jn</small> <small class="text-muted d-block">15 Feb 23, Sat</small> </div>
+                    <div class="col col-sm-2 text-center d-none d-sm-block time-info"> <span class="text-3 duration">1h 55m</span> <small class="text-muted d-block">12 Stops</small> </div>
+                    <div class="col col-sm-2 text-center time-info"> <span class="text-4 text-dark">09:55</span> <small class="text-muted d-block">Diamniadio Jn</small> <small class="text-muted d-block">15 Feb 23, Sat</small> </div>
+                    <div class="col-12 col-sm-3 text-center mt-2 mt-sm-0"> <a href="#" class="btn btn-sm btn-outline-primary shadow-none" data-toggle="modal" data-target="#train-1"><i class="fas fa-ellipsis-h d-none d-sm-block d-xl-none" data-toggle="tooltip" title="Check Availability"></i> <span class="d-block d-sm-none d-xl-block">Check Availability</span></a> </div>
+                  </div>
+                  <!-- Train Details Modal Dialog
+                  ============================================= -->
+                  <div id="train-1" class="modal fade" role="dialog" aria-hidden="true">
+                    <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <h5 class="modal-title">Train Details</h5>
+                          <button type="button" class="close" data-dismiss="modal" aria-label="Close"> <span aria-hidden="true">&times;</span> </button>
+                        </div>
+                        <div class="modal-body">
+                          <div class="train-details">
+                            <div class="row align-items-sm-center flex-row mb-4">
+                              <div class="col col-sm-3"> <span class="text-4 text-dark train-name">Express</span> <span class="text-muted d-block">12916</span> </div>
+                              <div class="col col-sm-3 text-center time-info"> <span class="text-5 text-dark">08:00</span> <small class="text-muted d-block">Dakar Jn</small> <small class="text-muted d-block">15 Feb 23, Sat</small> </div>
+                              <div class="col col-sm-3 text-center d-none d-sm-block time-info"> <span class="text-3 duration">1h 55m</span> <small class="text-muted d-block">35 Stops</small> </div>
+                              <div class="col col-sm-3 text-center time-info"> <span class="text-5 text-dark">09:55</span> <small class="text-muted d-block">Diamniadio Jn</small> <small class="text-muted d-block">15 Feb 18, Sat</small> </div>
+                            </div>
+                            <div class="mb-3 text-center">
+                              <div class="custom-control custom-radio custom-control-inline">
+                                <input id="1st" name="trains-trip" class="custom-control-input" checked="" required type="radio">
+                                <label class="custom-control-label" for="1st">First Class</label>
+                              </div>
+                              <div class="custom-control custom-radio custom-control-inline">
+                                <input id="2nd" name="trains-trip" class="custom-control-input" required type="radio">
+                                <label class="custom-control-label" for="2nd">Second Class</label>
+                              </div>
+                              <div class="custom-control custom-radio custom-control-inline">
+                                <input id="1stSL" name="trains-trip" class="custom-control-input" required type="radio">
+                                <label class="custom-control-label" for="1stSL">First Class Sleeper</label>
+                              </div>
+                            </div>
+                            <ul class="d-flex align-items-center date-available">
+                              <li class="text-center p-4"> <span class="d-block text-dark font-weight-500">15 Fub, Sat</span>
+                                <div class="custom-control custom-radio d-inline-block">
+                                  <input id="15" name="date-available" class="custom-control-input" checked required type="radio">
+                                  <label class="custom-control-label text-success" for="15">Available</label>
+                                </div>
+                              </li>
+                              <li class="text-center p-4"> <span class="d-block text-dark font-weight-500">16 Fub, Sat</span>
+                                <div class="custom-control custom-radio d-inline-block">
+                                  <input id="16" name="date-available" class="custom-control-input" required type="radio">
+                                  <label class="custom-control-label text-success" for="16">Available</label>
+                                </div>
+                              </li>
+                              <li class="text-center p-4"> <span class="d-block text-dark font-weight-500">17 Fub, Sat</span>
+                                <div class="custom-control custom-radio d-inline-block">
+                                  <input id="17" name="date-available" class="custom-control-input" disabled required type="radio">
+                                  <label class="custom-control-label text-danger" for="17">Unavailable</label>
+                                </div>
+                              </li>
+                              <li class="text-center p-4"> <span class="d-block text-dark font-weight-500">18 Fub, Sat</span>
+                                <div class="custom-control custom-radio d-inline-block">
+                                  <input id="18" name="date-available" class="custom-control-input" required type="radio">
+                                  <label class="custom-control-label text-success" for="18">Available</label>
+                                </div>
+                              </li>
+                              <li class="text-center p-4"> <span class="d-block text-dark font-weight-500">19	 Fub, Sat</span>
+                                <div class="custom-control custom-radio d-inline-block">
+                                  <input id="19" name="date-available" class="custom-control-input" required type="radio">
+                                  <label class="custom-control-label text-success" for="19">Available</label>
+                                </div>
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                        <div class="modal-footer bg-light-4 rounded-left rounded-right">
+                          <div class="row flex-fill align-items-center">
+                            <div class="col">Total Fare: <span class="d-block text-dark text-6 font-weight-600">$30</span></div>
+                            <div class="col text-right"> <a href="{{ path('app_trip_create') }}" class="btn btn-primary">Book Now</a> </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div><!-- Train Details Modal Dialog end -->
+                </div>
+              </div>
+              <ul class="pagination justify-content-center mt-4 mb-0">
+                <li class="page-item disabled"> <a class="page-link" href="#" tabindex="-1"><i class="fas fa-angle-left"></i></a> </li>
+                <li class="page-item active"> <a class="page-link" href="#">1 <span class="sr-only">(current)</span></a> </li>
+                <li class="page-item"> <a class="page-link" href="#"><i class="fas fa-angle-right"></i></a> </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+    </section>
+  </div><!-- Content end -->
+{% endblock %}

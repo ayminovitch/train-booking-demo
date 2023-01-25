@@ -1,0 +1,4 @@
+services:
+    mailhog:
+        type: mailhog
+        portforward: true

@@ -1,0 +1,31 @@
+parameters:
+    locale: 'en'
+    app_locales: en|fr|de
+    app.notifications.email_sender: anonymous@example.com
+
+services:
+    _defaults:
+        autowire: true      
+        autoconfigure: true 
+        bind:               
+            string $locales: '%app_locales%'
+            string $defaultLocale: '%locale%'
+            string $emailSender: '%app.notifications.email_sender%'
+
+    App\:
+        resource: '../src/'
+        exclude:
+            - '../src/DependencyInjection/'
+            - '../src/Entity/'
+            - '../src/Kernel.php'
+            - '../src/Tests/'
+
+    App\EventListener\ReferenceCode\ReferenceCodeListener:
+        tags:
+            - { name: 'doctrine.event_listener', event: 'postPersist' }
+
+when@test:
+    services:
+        test.user_password_hasher:
+            alias: 'security.user_password_hasher'
+            public: true

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="{{ app.request.locale }}">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1"/>
+        <title>{% block title %}TER Demo application{% endblock %}</title>
+
+        {% block stylesheets %}
+            {{ encore_entry_link_tags('app') }}
+        {% endblock %}
+        {% block javascripts %}
+            {{ encore_entry_script_tags('app') }}
+        {% endblock %}
+
+        <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
+    </head>
+
+    <body id="{% block body_id %}{% endblock %}">
+
+        <!-- Preloader -->
+        {# <div id="preloader"><div data-loader="dual-ring"></div></div><!-- Preloader End --> #}
+
+        <!-- Document Wrapper   
+        ============================================= -->
+        <div id="main-wrapper">
+
+            {% block header %}
+                {{ include ('_header.html.twig') }}
+            {% endblock %}
+
+            {% block content %}{% endblock %}
+
+            {% block footer %}
+                {{ include ('_footer.html.twig') }}
+            {% endblock %}
+
+        </div><!-- Document Wrapper end -->
+
+        <!-- Back to Top
+        ============================================= -->
+        <a id="back-to-top" data-toggle="tooltip" title="Back to Top" href="javascript:void(0)">
+            <i class="fa fa-chevron-up"></i>
+        </a>
+
+        {# it's not mandatory to set the timezone in localizeddate(). This is done to
+           avoid errors when the 'intl' PHP extension is not available and the application
+           is forced to use the limited "intl polyfill", which only supports UTC and GMT #}
+        <!-- Page rendered on {{ 'now'|format_datetime('long', 'long', '', 'UTC') }} -->
+    </body>
+</html>
