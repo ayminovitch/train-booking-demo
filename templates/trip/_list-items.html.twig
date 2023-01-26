@@ -1,0 +1,644 @@
+<div class="train-item">
+	<div class="row align-items-sm-center flex-row py-4 px-3">
+		<div class="col col-sm-3">
+			<span class="text-4 text-dark train-name">Express</span>
+			<span class="text-muted d-block">12916</span>
+		</div>
+		<div class="col col-sm-2 text-center time-info">
+			<span class="text-4 text-dark">08:00</span>
+			<small class="text-muted d-block">Dakar Jn</small>
+			<small class="text-muted d-block">15 Feb 23, Sat</small>
+		</div>
+		<div class="col col-sm-2 text-center d-none d-sm-block time-info">
+			<span class="text-3 duration">20m</span>
+			<small class="text-muted d-block">12 Stops</small>
+		</div>
+		<div class="col col-sm-2 text-center time-info">
+			<span class="text-4 text-dark">09:55</span>
+			<small class="text-muted d-block">Diamniadio Jn</small>
+			<small class="text-muted d-block">15 Feb 23, Sat</small>
+		</div>
+		<div class="col-12 col-sm-3 text-center mt-2 mt-sm-0">
+			<a href="#" class="btn btn-sm btn-outline-primary shadow-none" data-toggle="modal" data-target="#train-1">
+				<i class="fas fa-ellipsis-h d-none d-sm-block d-xl-none" data-toggle="tooltip" title="Check Availability"></i>
+				<span class="d-block d-sm-none d-xl-block">Check Availability</span>
+			</a>
+		</div>
+	</div>
+	<!-- Train Details Modal Dialog
+	                  ============================================= -->
+	<div id="train-1" class="modal fade" role="dialog" aria-hidden="true">
+		<div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title">Train Details</h5>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+				<div class="modal-body">
+					<div class="train-details">
+						<div class="row align-items-sm-center flex-row mb-4">
+							<div class="col col-sm-3">
+								<span class="text-4 text-dark train-name">Express</span>
+								<span class="text-muted d-block">12916</span>
+							</div>
+							<div class="col col-sm-3 text-center time-info">
+								<span class="text-5 text-dark">08:00</span>
+								<small class="text-muted d-block">Dakar Jn</small>
+								<small class="text-muted d-block">15 Feb 23, Sat</small>
+							</div>
+							<div class="col col-sm-3 text-center d-none d-sm-block time-info">
+								<span class="text-3 duration">20m</span>
+								<small class="text-muted d-block">35 Stops</small>
+							</div>
+							<div class="col col-sm-3 text-center time-info">
+								<span class="text-5 text-dark">09:55</span>
+								<small class="text-muted d-block">Diamniadio Jn</small>
+								<small class="text-muted d-block">15 Feb 18, Sat</small>
+							</div>
+						</div>
+						<div class="mb-3 text-center">
+							<div class="custom-control custom-radio custom-control-inline">
+								<input id="1st" name="trains-trip" class="custom-control-input" checked="" required type="radio">
+								<label class="custom-control-label" for="1st">First Class</label>
+							</div>
+							<div class="custom-control custom-radio custom-control-inline">
+								<input id="2nd" name="trains-trip" class="custom-control-input" required type="radio">
+								<label class="custom-control-label" for="2nd">Second Class</label>
+							</div>
+							<div class="custom-control custom-radio custom-control-inline">
+								<input id="1stSL" name="trains-trip" class="custom-control-input" required type="radio">
+								<label class="custom-control-label" for="1stSL">First Class Sleeper</label>
+							</div>
+						</div>
+						<ul class="d-flex align-items-center date-available">
+							<li class="text-center p-4">
+								<span class="d-block text-dark font-weight-500">15 Fub, Sat</span>
+								<div class="custom-control custom-radio d-inline-block">
+									<input id="15" name="date-available" class="custom-control-input" checked required type="radio">
+									<label class="custom-control-label text-success" for="15">Available</label>
+								</div>
+							</li>
+							<li class="text-center p-4">
+								<span class="d-block text-dark font-weight-500">16 Fub, Sat</span>
+								<div class="custom-control custom-radio d-inline-block">
+									<input id="16" name="date-available" class="custom-control-input" required type="radio">
+									<label class="custom-control-label text-success" for="16">Available</label>
+								</div>
+							</li>
+							<li class="text-center p-4">
+								<span class="d-block text-dark font-weight-500">17 Fub, Sat</span>
+								<div class="custom-control custom-radio d-inline-block">
+									<input id="17" name="date-available" class="custom-control-input" disabled required type="radio">
+									<label class="custom-control-label text-danger" for="17">Unavailable</label>
+								</div>
+							</li>
+							<li class="text-center p-4">
+								<span class="d-block text-dark font-weight-500">18 Fub, Sat</span>
+								<div class="custom-control custom-radio d-inline-block">
+									<input id="18" name="date-available" class="custom-control-input" required type="radio">
+									<label class="custom-control-label text-success" for="18">Available</label>
+								</div>
+							</li>
+							<li class="text-center p-4">
+								<span class="d-block text-dark font-weight-500">19	 Fub, Sat</span>
+								<div class="custom-control custom-radio d-inline-block">
+									<input id="19" name="date-available" class="custom-control-input" required type="radio">
+									<label class="custom-control-label text-success" for="19">Available</label>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="modal-footer bg-light-4 rounded-left rounded-right">
+					<div class="row flex-fill align-items-center">
+						<div class="col">Total Fare:
+							<span class="d-block text-dark text-6 font-weight-600">1.500F</span>
+						</div>
+						<div class="col text-right">
+							<a href="{{ path('app_trip_create') }}" class="btn btn-primary">Book Now</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- Train Details Modal Dialog end -->
+</div>
+
+<div class="train-item">
+	<div class="row align-items-sm-center flex-row py-4 px-3">
+		<div class="col col-sm-3">
+			<span class="text-4 text-dark train-name">Express</span>
+			<span class="text-muted d-block">12916</span>
+		</div>
+		<div class="col col-sm-2 text-center time-info">
+			<span class="text-4 text-dark">08:00</span>
+			<small class="text-muted d-block">Dakar Jn</small>
+			<small class="text-muted d-block">15 Feb 23, Sat</small>
+		</div>
+		<div class="col col-sm-2 text-center d-none d-sm-block time-info">
+			<span class="text-3 duration">20m</span>
+			<small class="text-muted d-block">12 Stops</small>
+		</div>
+		<div class="col col-sm-2 text-center time-info">
+			<span class="text-4 text-dark">09:55</span>
+			<small class="text-muted d-block">Diamniadio Jn</small>
+			<small class="text-muted d-block">15 Feb 23, Sat</small>
+		</div>
+		<div class="col-12 col-sm-3 text-center mt-2 mt-sm-0">
+			<a href="#" class="btn btn-sm btn-outline-primary shadow-none" data-toggle="modal" data-target="#train-1">
+				<i class="fas fa-ellipsis-h d-none d-sm-block d-xl-none" data-toggle="tooltip" title="Check Availability"></i>
+				<span class="d-block d-sm-none d-xl-block">Check Availability</span>
+			</a>
+		</div>
+	</div>
+	<!-- Train Details Modal Dialog
+	                  ============================================= -->
+	<div id="train-1" class="modal fade" role="dialog" aria-hidden="true">
+		<div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title">Train Details</h5>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+				<div class="modal-body">
+					<div class="train-details">
+						<div class="row align-items-sm-center flex-row mb-4">
+							<div class="col col-sm-3">
+								<span class="text-4 text-dark train-name">Express</span>
+								<span class="text-muted d-block">12916</span>
+							</div>
+							<div class="col col-sm-3 text-center time-info">
+								<span class="text-5 text-dark">08:00</span>
+								<small class="text-muted d-block">Dakar Jn</small>
+								<small class="text-muted d-block">15 Feb 23, Sat</small>
+							</div>
+							<div class="col col-sm-3 text-center d-none d-sm-block time-info">
+								<span class="text-3 duration">20m</span>
+								<small class="text-muted d-block">35 Stops</small>
+							</div>
+							<div class="col col-sm-3 text-center time-info">
+								<span class="text-5 text-dark">09:55</span>
+								<small class="text-muted d-block">Diamniadio Jn</small>
+								<small class="text-muted d-block">15 Feb 18, Sat</small>
+							</div>
+						</div>
+						<div class="mb-3 text-center">
+							<div class="custom-control custom-radio custom-control-inline">
+								<input id="1st" name="trains-trip" class="custom-control-input" checked="" required type="radio">
+								<label class="custom-control-label" for="1st">First Class</label>
+							</div>
+							<div class="custom-control custom-radio custom-control-inline">
+								<input id="2nd" name="trains-trip" class="custom-control-input" required type="radio">
+								<label class="custom-control-label" for="2nd">Second Class</label>
+							</div>
+							<div class="custom-control custom-radio custom-control-inline">
+								<input id="1stSL" name="trains-trip" class="custom-control-input" required type="radio">
+								<label class="custom-control-label" for="1stSL">First Class Sleeper</label>
+							</div>
+						</div>
+						<ul class="d-flex align-items-center date-available">
+							<li class="text-center p-4">
+								<span class="d-block text-dark font-weight-500">15 Fub, Sat</span>
+								<div class="custom-control custom-radio d-inline-block">
+									<input id="15" name="date-available" class="custom-control-input" checked required type="radio">
+									<label class="custom-control-label text-success" for="15">Available</label>
+								</div>
+							</li>
+							<li class="text-center p-4">
+								<span class="d-block text-dark font-weight-500">16 Fub, Sat</span>
+								<div class="custom-control custom-radio d-inline-block">
+									<input id="16" name="date-available" class="custom-control-input" required type="radio">
+									<label class="custom-control-label text-success" for="16">Available</label>
+								</div>
+							</li>
+							<li class="text-center p-4">
+								<span class="d-block text-dark font-weight-500">17 Fub, Sat</span>
+								<div class="custom-control custom-radio d-inline-block">
+									<input id="17" name="date-available" class="custom-control-input" disabled required type="radio">
+									<label class="custom-control-label text-danger" for="17">Unavailable</label>
+								</div>
+							</li>
+							<li class="text-center p-4">
+								<span class="d-block text-dark font-weight-500">18 Fub, Sat</span>
+								<div class="custom-control custom-radio d-inline-block">
+									<input id="18" name="date-available" class="custom-control-input" required type="radio">
+									<label class="custom-control-label text-success" for="18">Available</label>
+								</div>
+							</li>
+							<li class="text-center p-4">
+								<span class="d-block text-dark font-weight-500">19	 Fub, Sat</span>
+								<div class="custom-control custom-radio d-inline-block">
+									<input id="19" name="date-available" class="custom-control-input" required type="radio">
+									<label class="custom-control-label text-success" for="19">Available</label>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="modal-footer bg-light-4 rounded-left rounded-right">
+					<div class="row flex-fill align-items-center">
+						<div class="col">Total Fare:
+							<span class="d-block text-dark text-6 font-weight-600">1.500F</span>
+						</div>
+						<div class="col text-right">
+							<a href="{{ path('app_trip_create') }}" class="btn btn-primary">Book Now</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- Train Details Modal Dialog end -->
+</div>
+
+<div class="train-item">
+	<div class="row align-items-sm-center flex-row py-4 px-3">
+		<div class="col col-sm-3">
+			<span class="text-4 text-dark train-name">Express</span>
+			<span class="text-muted d-block">12916</span>
+		</div>
+		<div class="col col-sm-2 text-center time-info">
+			<span class="text-4 text-dark">08:00</span>
+			<small class="text-muted d-block">Dakar Jn</small>
+			<small class="text-muted d-block">15 Feb 23, Sat</small>
+		</div>
+		<div class="col col-sm-2 text-center d-none d-sm-block time-info">
+			<span class="text-3 duration">20m</span>
+			<small class="text-muted d-block">12 Stops</small>
+		</div>
+		<div class="col col-sm-2 text-center time-info">
+			<span class="text-4 text-dark">09:55</span>
+			<small class="text-muted d-block">Diamniadio Jn</small>
+			<small class="text-muted d-block">15 Feb 23, Sat</small>
+		</div>
+		<div class="col-12 col-sm-3 text-center mt-2 mt-sm-0">
+			<a href="#" class="btn btn-sm btn-outline-primary shadow-none" data-toggle="modal" data-target="#train-1">
+				<i class="fas fa-ellipsis-h d-none d-sm-block d-xl-none" data-toggle="tooltip" title="Check Availability"></i>
+				<span class="d-block d-sm-none d-xl-block">Check Availability</span>
+			</a>
+		</div>
+	</div>
+	<!-- Train Details Modal Dialog
+	                  ============================================= -->
+	<div id="train-1" class="modal fade" role="dialog" aria-hidden="true">
+		<div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title">Train Details</h5>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+				<div class="modal-body">
+					<div class="train-details">
+						<div class="row align-items-sm-center flex-row mb-4">
+							<div class="col col-sm-3">
+								<span class="text-4 text-dark train-name">Express</span>
+								<span class="text-muted d-block">12916</span>
+							</div>
+							<div class="col col-sm-3 text-center time-info">
+								<span class="text-5 text-dark">08:00</span>
+								<small class="text-muted d-block">Dakar Jn</small>
+								<small class="text-muted d-block">15 Feb 23, Sat</small>
+							</div>
+							<div class="col col-sm-3 text-center d-none d-sm-block time-info">
+								<span class="text-3 duration">20m</span>
+								<small class="text-muted d-block">35 Stops</small>
+							</div>
+							<div class="col col-sm-3 text-center time-info">
+								<span class="text-5 text-dark">09:55</span>
+								<small class="text-muted d-block">Diamniadio Jn</small>
+								<small class="text-muted d-block">15 Feb 18, Sat</small>
+							</div>
+						</div>
+						<div class="mb-3 text-center">
+							<div class="custom-control custom-radio custom-control-inline">
+								<input id="1st" name="trains-trip" class="custom-control-input" checked="" required type="radio">
+								<label class="custom-control-label" for="1st">First Class</label>
+							</div>
+							<div class="custom-control custom-radio custom-control-inline">
+								<input id="2nd" name="trains-trip" class="custom-control-input" required type="radio">
+								<label class="custom-control-label" for="2nd">Second Class</label>
+							</div>
+							<div class="custom-control custom-radio custom-control-inline">
+								<input id="1stSL" name="trains-trip" class="custom-control-input" required type="radio">
+								<label class="custom-control-label" for="1stSL">First Class Sleeper</label>
+							</div>
+						</div>
+						<ul class="d-flex align-items-center date-available">
+							<li class="text-center p-4">
+								<span class="d-block text-dark font-weight-500">15 Fub, Sat</span>
+								<div class="custom-control custom-radio d-inline-block">
+									<input id="15" name="date-available" class="custom-control-input" checked required type="radio">
+									<label class="custom-control-label text-success" for="15">Available</label>
+								</div>
+							</li>
+							<li class="text-center p-4">
+								<span class="d-block text-dark font-weight-500">16 Fub, Sat</span>
+								<div class="custom-control custom-radio d-inline-block">
+									<input id="16" name="date-available" class="custom-control-input" required type="radio">
+									<label class="custom-control-label text-success" for="16">Available</label>
+								</div>
+							</li>
+							<li class="text-center p-4">
+								<span class="d-block text-dark font-weight-500">17 Fub, Sat</span>
+								<div class="custom-control custom-radio d-inline-block">
+									<input id="17" name="date-available" class="custom-control-input" disabled required type="radio">
+									<label class="custom-control-label text-danger" for="17">Unavailable</label>
+								</div>
+							</li>
+							<li class="text-center p-4">
+								<span class="d-block text-dark font-weight-500">18 Fub, Sat</span>
+								<div class="custom-control custom-radio d-inline-block">
+									<input id="18" name="date-available" class="custom-control-input" required type="radio">
+									<label class="custom-control-label text-success" for="18">Available</label>
+								</div>
+							</li>
+							<li class="text-center p-4">
+								<span class="d-block text-dark font-weight-500">19	 Fub, Sat</span>
+								<div class="custom-control custom-radio d-inline-block">
+									<input id="19" name="date-available" class="custom-control-input" required type="radio">
+									<label class="custom-control-label text-success" for="19">Available</label>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="modal-footer bg-light-4 rounded-left rounded-right">
+					<div class="row flex-fill align-items-center">
+						<div class="col">Total Fare:
+							<span class="d-block text-dark text-6 font-weight-600">1.500F</span>
+						</div>
+						<div class="col text-right">
+							<a href="{{ path('app_trip_create') }}" class="btn btn-primary">Book Now</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- Train Details Modal Dialog end -->
+</div>
+
+<div class="train-item">
+	<div class="row align-items-sm-center flex-row py-4 px-3">
+		<div class="col col-sm-3">
+			<span class="text-4 text-dark train-name">Express</span>
+			<span class="text-muted d-block">12916</span>
+		</div>
+		<div class="col col-sm-2 text-center time-info">
+			<span class="text-4 text-dark">08:00</span>
+			<small class="text-muted d-block">Dakar Jn</small>
+			<small class="text-muted d-block">15 Feb 23, Sat</small>
+		</div>
+		<div class="col col-sm-2 text-center d-none d-sm-block time-info">
+			<span class="text-3 duration">20m</span>
+			<small class="text-muted d-block">12 Stops</small>
+		</div>
+		<div class="col col-sm-2 text-center time-info">
+			<span class="text-4 text-dark">09:55</span>
+			<small class="text-muted d-block">Diamniadio Jn</small>
+			<small class="text-muted d-block">15 Feb 23, Sat</small>
+		</div>
+		<div class="col-12 col-sm-3 text-center mt-2 mt-sm-0">
+			<a href="#" class="btn btn-sm btn-outline-primary shadow-none" data-toggle="modal" data-target="#train-1">
+				<i class="fas fa-ellipsis-h d-none d-sm-block d-xl-none" data-toggle="tooltip" title="Check Availability"></i>
+				<span class="d-block d-sm-none d-xl-block">Check Availability</span>
+			</a>
+		</div>
+	</div>
+	<!-- Train Details Modal Dialog
+	                  ============================================= -->
+	<div id="train-1" class="modal fade" role="dialog" aria-hidden="true">
+		<div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title">Train Details</h5>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+				<div class="modal-body">
+					<div class="train-details">
+						<div class="row align-items-sm-center flex-row mb-4">
+							<div class="col col-sm-3">
+								<span class="text-4 text-dark train-name">Express</span>
+								<span class="text-muted d-block">12916</span>
+							</div>
+							<div class="col col-sm-3 text-center time-info">
+								<span class="text-5 text-dark">08:00</span>
+								<small class="text-muted d-block">Dakar Jn</small>
+								<small class="text-muted d-block">15 Feb 23, Sat</small>
+							</div>
+							<div class="col col-sm-3 text-center d-none d-sm-block time-info">
+								<span class="text-3 duration">20m</span>
+								<small class="text-muted d-block">35 Stops</small>
+							</div>
+							<div class="col col-sm-3 text-center time-info">
+								<span class="text-5 text-dark">09:55</span>
+								<small class="text-muted d-block">Diamniadio Jn</small>
+								<small class="text-muted d-block">15 Feb 18, Sat</small>
+							</div>
+						</div>
+						<div class="mb-3 text-center">
+							<div class="custom-control custom-radio custom-control-inline">
+								<input id="1st" name="trains-trip" class="custom-control-input" checked="" required type="radio">
+								<label class="custom-control-label" for="1st">First Class</label>
+							</div>
+							<div class="custom-control custom-radio custom-control-inline">
+								<input id="2nd" name="trains-trip" class="custom-control-input" required type="radio">
+								<label class="custom-control-label" for="2nd">Second Class</label>
+							</div>
+							<div class="custom-control custom-radio custom-control-inline">
+								<input id="1stSL" name="trains-trip" class="custom-control-input" required type="radio">
+								<label class="custom-control-label" for="1stSL">First Class Sleeper</label>
+							</div>
+						</div>
+						<ul class="d-flex align-items-center date-available">
+							<li class="text-center p-4">
+								<span class="d-block text-dark font-weight-500">15 Fub, Sat</span>
+								<div class="custom-control custom-radio d-inline-block">
+									<input id="15" name="date-available" class="custom-control-input" checked required type="radio">
+									<label class="custom-control-label text-success" for="15">Available</label>
+								</div>
+							</li>
+							<li class="text-center p-4">
+								<span class="d-block text-dark font-weight-500">16 Fub, Sat</span>
+								<div class="custom-control custom-radio d-inline-block">
+									<input id="16" name="date-available" class="custom-control-input" required type="radio">
+									<label class="custom-control-label text-success" for="16">Available</label>
+								</div>
+							</li>
+							<li class="text-center p-4">
+								<span class="d-block text-dark font-weight-500">17 Fub, Sat</span>
+								<div class="custom-control custom-radio d-inline-block">
+									<input id="17" name="date-available" class="custom-control-input" disabled required type="radio">
+									<label class="custom-control-label text-danger" for="17">Unavailable</label>
+								</div>
+							</li>
+							<li class="text-center p-4">
+								<span class="d-block text-dark font-weight-500">18 Fub, Sat</span>
+								<div class="custom-control custom-radio d-inline-block">
+									<input id="18" name="date-available" class="custom-control-input" required type="radio">
+									<label class="custom-control-label text-success" for="18">Available</label>
+								</div>
+							</li>
+							<li class="text-center p-4">
+								<span class="d-block text-dark font-weight-500">19	 Fub, Sat</span>
+								<div class="custom-control custom-radio d-inline-block">
+									<input id="19" name="date-available" class="custom-control-input" required type="radio">
+									<label class="custom-control-label text-success" for="19">Available</label>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="modal-footer bg-light-4 rounded-left rounded-right">
+					<div class="row flex-fill align-items-center">
+						<div class="col">Total Fare:
+							<span class="d-block text-dark text-6 font-weight-600">1.500F</span>
+						</div>
+						<div class="col text-right">
+							<a href="{{ path('app_trip_create') }}" class="btn btn-primary">Book Now</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- Train Details Modal Dialog end -->
+</div>
+
+<div class="train-item">
+	<div class="row align-items-sm-center flex-row py-4 px-3">
+		<div class="col col-sm-3">
+			<span class="text-4 text-dark train-name">Express</span>
+			<span class="text-muted d-block">12916</span>
+		</div>
+		<div class="col col-sm-2 text-center time-info">
+			<span class="text-4 text-dark">08:00</span>
+			<small class="text-muted d-block">Dakar Jn</small>
+			<small class="text-muted d-block">15 Feb 23, Sat</small>
+		</div>
+		<div class="col col-sm-2 text-center d-none d-sm-block time-info">
+			<span class="text-3 duration">20m</span>
+			<small class="text-muted d-block">12 Stops</small>
+		</div>
+		<div class="col col-sm-2 text-center time-info">
+			<span class="text-4 text-dark">09:55</span>
+			<small class="text-muted d-block">Diamniadio Jn</small>
+			<small class="text-muted d-block">15 Feb 23, Sat</small>
+		</div>
+		<div class="col-12 col-sm-3 text-center mt-2 mt-sm-0">
+			<a href="#" class="btn btn-sm btn-outline-primary shadow-none" data-toggle="modal" data-target="#train-1">
+				<i class="fas fa-ellipsis-h d-none d-sm-block d-xl-none" data-toggle="tooltip" title="Check Availability"></i>
+				<span class="d-block d-sm-none d-xl-block">Check Availability</span>
+			</a>
+		</div>
+	</div>
+	<!-- Train Details Modal Dialog
+	                  ============================================= -->
+	<div id="train-1" class="modal fade" role="dialog" aria-hidden="true">
+		<div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title">Train Details</h5>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+				<div class="modal-body">
+					<div class="train-details">
+						<div class="row align-items-sm-center flex-row mb-4">
+							<div class="col col-sm-3">
+								<span class="text-4 text-dark train-name">Express</span>
+								<span class="text-muted d-block">12916</span>
+							</div>
+							<div class="col col-sm-3 text-center time-info">
+								<span class="text-5 text-dark">08:00</span>
+								<small class="text-muted d-block">Dakar Jn</small>
+								<small class="text-muted d-block">15 Feb 23, Sat</small>
+							</div>
+							<div class="col col-sm-3 text-center d-none d-sm-block time-info">
+								<span class="text-3 duration">20m</span>
+								<small class="text-muted d-block">35 Stops</small>
+							</div>
+							<div class="col col-sm-3 text-center time-info">
+								<span class="text-5 text-dark">09:55</span>
+								<small class="text-muted d-block">Diamniadio Jn</small>
+								<small class="text-muted d-block">15 Feb 18, Sat</small>
+							</div>
+						</div>
+						<div class="mb-3 text-center">
+							<div class="custom-control custom-radio custom-control-inline">
+								<input id="1st" name="trains-trip" class="custom-control-input" checked="" required type="radio">
+								<label class="custom-control-label" for="1st">First Class</label>
+							</div>
+							<div class="custom-control custom-radio custom-control-inline">
+								<input id="2nd" name="trains-trip" class="custom-control-input" required type="radio">
+								<label class="custom-control-label" for="2nd">Second Class</label>
+							</div>
+							<div class="custom-control custom-radio custom-control-inline">
+								<input id="1stSL" name="trains-trip" class="custom-control-input" required type="radio">
+								<label class="custom-control-label" for="1stSL">First Class Sleeper</label>
+							</div>
+						</div>
+						<ul class="d-flex align-items-center date-available">
+							<li class="text-center p-4">
+								<span class="d-block text-dark font-weight-500">15 Fub, Sat</span>
+								<div class="custom-control custom-radio d-inline-block">
+									<input id="15" name="date-available" class="custom-control-input" checked required type="radio">
+									<label class="custom-control-label text-success" for="15">Available</label>
+								</div>
+							</li>
+							<li class="text-center p-4">
+								<span class="d-block text-dark font-weight-500">16 Fub, Sat</span>
+								<div class="custom-control custom-radio d-inline-block">
+									<input id="16" name="date-available" class="custom-control-input" required type="radio">
+									<label class="custom-control-label text-success" for="16">Available</label>
+								</div>
+							</li>
+							<li class="text-center p-4">
+								<span class="d-block text-dark font-weight-500">17 Fub, Sat</span>
+								<div class="custom-control custom-radio d-inline-block">
+									<input id="17" name="date-available" class="custom-control-input" disabled required type="radio">
+									<label class="custom-control-label text-danger" for="17">Unavailable</label>
+								</div>
+							</li>
+							<li class="text-center p-4">
+								<span class="d-block text-dark font-weight-500">18 Fub, Sat</span>
+								<div class="custom-control custom-radio d-inline-block">
+									<input id="18" name="date-available" class="custom-control-input" required type="radio">
+									<label class="custom-control-label text-success" for="18">Available</label>
+								</div>
+							</li>
+							<li class="text-center p-4">
+								<span class="d-block text-dark font-weight-500">19	 Fub, Sat</span>
+								<div class="custom-control custom-radio d-inline-block">
+									<input id="19" name="date-available" class="custom-control-input" required type="radio">
+									<label class="custom-control-label text-success" for="19">Available</label>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="modal-footer bg-light-4 rounded-left rounded-right">
+					<div class="row flex-fill align-items-center">
+						<div class="col">Total Fare:
+							<span class="d-block text-dark text-6 font-weight-600">1.500F</span>
+						</div>
+						<div class="col text-right">
+							<a href="{{ path('app_trip_create') }}" class="btn btn-primary">Book Now</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- Train Details Modal Dialog end -->
+</div>
